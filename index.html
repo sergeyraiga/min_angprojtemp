@@ -1,0 +1,42 @@
+<html ng-app="min_angprojtemp">
+  <head>
+     <!-- CSS -->
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css" />
+  </head>
+  <body ng-controller="index">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Minimal Angular WebApp</a>
+            </div>      
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/"><i class="glyphicon glyphicon-home"></i> Main</a></li>
+                <li><a href="#/site/services"><i class="glyphicon glyphicon-gift"></i> Services</a></li>
+                <li><a href="#/site/about"><i class="glyphicon glyphicon-tag"></i> About</a></li>
+                <li><a href="#/site/contact"><i class="glyphicon glyphicon-envelope"></i> Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main" class="container"> 
+        <!-- Здесь будет динамическое содержимое -->
+        <div ng-view>
+          
+        </div>    
+    </div>
+ 
+    <footer class="text-center">
+        <p>Works with AngularJs</p>
+    </footer>
+
+     <!-- JS -->
+     <script src="assets/angular/angular.min.js"></script>
+     <script src="assets/angular/angular-route.min.js"></script>
+     <!-- Подключаем модули приложения -->
+     <script src="app.js"></script>
+     <script src="controllers/site.js"></script>
+     <script src="models/services.js"></script> 
+  </body>
+</html>
